@@ -7,8 +7,9 @@
       </RouterLink>
 
       <nav class="nav">
-        <RouterLink to="/about">À propos</RouterLink>
-        <RouterLink to="/contact">Contact</RouterLink>
+        <RouterLink to="/products" class="products-button">Produits</RouterLink>
+        <RouterLink to="/about" class="secondary-link">À propos</RouterLink>
+        <RouterLink to="/contact" class="secondary-link">Contact</RouterLink>
       </nav>
     </div>
   </header>
@@ -20,8 +21,8 @@ import { RouterLink } from 'vue-router'
 
 <style scoped>
 .header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-header);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   padding: 1rem 0;
   width: 100%;
 }
@@ -45,7 +46,7 @@ import { RouterLink } from 'vue-router'
 .logo-placeholder {
   width: 50px;
   height: 50px;
-  background-color: #42b883;
+  background-color: var(--color-accent-green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,25 +59,39 @@ import { RouterLink } from 'vue-router'
 .logo-text {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #2c3e50;
+  color: var(--color-text-white);
 }
 
 .nav {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
+  align-items: center;
 }
 
-.nav a {
+.products-button {
   text-decoration: none;
-  color: #2c3e50;
-  font-weight: 500;
-  font-size: 1.1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  background-color: var(--color-accent-green);
+  border-radius: 8px;
+  transition: all 0.3s;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.products-button:hover {
+  background-color: #66bb6a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.secondary-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 1rem;
   transition: color 0.3s;
   padding: 0.5rem 1rem;
-}
-
-.nav a:hover,
-.nav a.router-link-active {
-  color: #42b883;
 }
 </style>

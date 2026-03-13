@@ -6,8 +6,11 @@ import Footer from './components/Footer.vue'
 
 <template>
   <div id="app">
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
     <Header />
-    <RouterView />
+    <main id="main-content" class="main-content">
+      <RouterView />
+    </main>
     <Footer />
   </div>
 </template>
@@ -18,5 +21,28 @@ import Footer from './components/Footer.vue'
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: #fff;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 </style>

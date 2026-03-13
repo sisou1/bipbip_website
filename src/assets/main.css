@@ -14,6 +14,17 @@ html, body {
 body {
   margin: 0;
   padding: 0;
+  caret-color: transparent;
+}
+
+input,
+textarea {
+  caret-color: auto;
+}
+
+:focus-visible {
+  outline: 3px solid #42b883;
+  outline-offset: 3px;
 }
 
 #app {

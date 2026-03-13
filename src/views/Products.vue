@@ -2,7 +2,7 @@
   <div class="products">
     <h1>Nos Produits</h1>
     <div class="products-grid">
-      <div class="product-card">
+      <article class="product-card">
         <div class="product-image">
           <div class="placeholder">IMAGE BRACELET</div>
         </div>
@@ -14,9 +14,9 @@
             vos préférences de couleur.
           </p>
         </div>
-      </div>
+      </article>
 
-      <div class="product-card">
+      <article class="product-card">
         <div class="product-image">
           <div class="placeholder">IMAGE COLLIER</div>
         </div>
@@ -28,9 +28,9 @@
             Disponible en plusieurs designs.
           </p>
         </div>
-      </div>
+      </article>
 
-      <div class="product-card">
+      <article class="product-card">
         <div class="product-image">
           <div class="placeholder">IMAGE MONTRE</div>
         </div>
@@ -42,7 +42,7 @@
             pour un suivi optimal.
           </p>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </template>
@@ -122,3 +122,5 @@ h1 {
   color: #555;
 }
 </style>
+
+

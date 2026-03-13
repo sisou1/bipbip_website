@@ -2,7 +2,7 @@
   <header class="header">
     <div class="container">
       <RouterLink to="/" class="logo">
-        <div class="logo-placeholder">LOGO</div>
+        <img :src="logoImg" alt="BipBip Logo" class="logo-img">
         <span class="logo-text">BipBip</span>
       </RouterLink>
 
@@ -17,6 +17,7 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import logoImg from '../assets/logo.png'
 </script>
 
 <style scoped>
@@ -54,6 +55,13 @@ import { RouterLink } from 'vue-router'
   color: white;
   font-size: 0.7rem;
   font-weight: bold;
+}
+
+.logo-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .logo-text {

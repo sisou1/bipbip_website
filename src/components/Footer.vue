@@ -8,10 +8,10 @@
 
 <style scoped>
 .footer {
-  background-color: var(--color-header);
-  padding: 2rem 0;
-  margin-top: auto;
   width: 100%;
+  margin-top: auto;
+  padding: 2rem 0;
+  background-color: var(--color-header);
 }
 
 .container {
@@ -21,8 +21,8 @@
 }
 
 .container p {
+  margin: 0;
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
-  margin: 0;
 }
 </style>

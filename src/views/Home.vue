@@ -1,24 +1,21 @@
 <template>
-  <div class="home">
+  <section class="home">
     <h1>BipBip</h1>
-  </div>
+  </section>
 </template>
-
-<script setup>
-</script>
 
 <style scoped>
 .home {
-  flex: 1;
-  width: 100%;
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 82px);
+  width: 100%;
 }
 
 h1 {
+  color: var(--color-text-dark);
   font-size: 4rem;
-  color: #2c3e50;
 }
 </style>

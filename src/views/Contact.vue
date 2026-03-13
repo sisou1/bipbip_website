@@ -1,86 +1,83 @@
 <template>
-  <div class="contact">
+  <section class="contact">
     <h1>Contact</h1>
     <form class="contact-form">
       <div class="form-group">
         <label for="name">Nom</label>
-        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        <input id="name" type="text" name="name" placeholder="Votre nom" required>
       </div>
-      
+
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+        <input id="email" type="email" name="email" placeholder="votre@email.com" required>
       </div>
-      
+
       <div class="form-group">
         <label for="subject">Sujet</label>
-        <input type="text" id="subject" name="subject" placeholder="Sujet du message" required>
+        <input id="subject" type="text" name="subject" placeholder="Sujet du message" required>
       </div>
-      
+
       <div class="form-group">
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="6" placeholder="Votre message..." required></textarea>
       </div>
-      
+
       <button type="submit" class="submit-btn">Envoyer</button>
     </form>
-  </div>
+  </section>
 </template>
-
-<script setup>
-</script>
 
 <style scoped>
 .contact {
   flex: 1;
+  min-height: calc(100vh - 82px);
   width: 100%;
   padding: 4rem;
-  min-height: calc(100vh - 82px);
 }
 
 h1 {
-  font-size: 3rem;
-  color: #2c3e50;
   margin-bottom: 2rem;
+  color: var(--color-text-dark);
+  font-size: 3rem;
 }
 
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
-  background: #f9f9f9;
-  padding: 2rem;
   border-radius: 8px;
+  background: #f9f9f9;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.5rem;
 }
 
 label {
-  font-weight: 600;
-  color: #2c3e50;
   margin-bottom: 0.5rem;
+  color: var(--color-text-dark);
   font-size: 1rem;
+  font-weight: 600;
 }
 
 input,
 textarea {
-  padding: 0.75rem;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 1rem;
+  padding: 0.75rem;
   font-family: inherit;
+  font-size: 1rem;
   transition: border-color 0.3s ease;
 }
 
 input:focus,
 textarea:focus {
-  outline: none;
-  border-color: #42b983;
+  border-color: var(--color-accent-green);
   box-shadow: 0 0 0 3px rgba(66, 185, 131, 0.1);
+  outline: none;
 }
 
 textarea {
@@ -88,21 +85,19 @@ textarea {
 }
 
 .submit-btn {
-  background-color: #42b983;
-  color: white;
-  padding: 0.75rem 2rem;
+  margin-top: 1rem;
   border: none;
   border-radius: 4px;
+  background-color: var(--color-accent-green);
+  color: var(--color-text-white);
+  cursor: pointer;
+  padding: 0.75rem 2rem;
   font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 1rem;
 }
 
 .submit-btn:hover {
   background-color: #35a372;
 }
 </style>
-
-

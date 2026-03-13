@@ -1,6 +1,6 @@
 <template>
-  <div class="products">
-    <h1>Nos Produits</h1>
+  <section class="products">
+    <h1>Nos produits</h1>
     <div class="products-grid">
       <article class="product-card">
         <div class="product-image">
@@ -44,24 +44,21 @@
         </div>
       </article>
     </div>
-  </div>
+  </section>
 </template>
-
-<script setup>
-</script>
 
 <style scoped>
 .products {
   flex: 1;
+  min-height: calc(100vh - 82px);
   width: 100%;
   padding: 4rem 8rem;
-  min-height: calc(100vh - 82px);
 }
 
 h1 {
-  font-size: 3rem;
   margin-bottom: 3rem;
   color: var(--color-text-dark);
+  font-size: 3rem;
 }
 
 .products-grid {
@@ -72,55 +69,53 @@ h1 {
 
 .product-card {
   display: flex;
-  width: 100%;
   min-height: 400px;
-  background-color: white;
-  border-radius: 12px;
+  width: 100%;
   overflow: hidden;
+  border-radius: 12px;
+  background-color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
 
 .product-image {
-  flex: 1;
-  background-color: #e0e0e0;
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
+  background-color: #e0e0e0;
 }
 
 .placeholder {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #999;
   padding: 2rem;
+  color: #999;
+  font-size: 1.5rem;
+  font-weight: 700;
   text-align: center;
 }
 
 .product-info {
-  flex: 1;
-  padding: 3rem;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
+  padding: 3rem;
 }
 
 .product-info h2 {
-  font-size: 2rem;
   margin-bottom: 1.5rem;
   color: var(--color-text-dark);
+  font-size: 2rem;
 }
 
 .product-info p {
+  color: #555;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #555;
 }
 </style>
-
-

@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2026 BipBip. Tous droits réservés. Marque déposée.</p>
+      <p>&copy; 2026 BipBip. Tous droits réservés.</p>
     </div>
   </footer>
 </template>

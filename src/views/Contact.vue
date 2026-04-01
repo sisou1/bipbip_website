@@ -7,6 +7,9 @@
     </p>
 
     <p v-if="status === 'success'" class="status status-success">Mail bien envoyé.</p>
+    <p v-else-if="status === 'config-error'" class="status status-error">
+      Configuration EmailJS incomplète. Vérifie les variables `VITE_EMAILJS_*` dans `.env`.
+    </p>
     <p v-else-if="status === 'error'" class="status status-error">
       Impossible d’envoyer le mail pour le moment. Merci de réessayer.
     </p>
@@ -55,6 +58,7 @@ const status = ref('idle')
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+const EMAILJS_TO_EMAIL = import.meta.env.VITE_EMAILJS_TO_EMAIL || 'fabienkiefer24@gmail.com'
 
 const resetForm = () => {
   form.name = ''
@@ -68,7 +72,7 @@ const handleSubmit = async () => {
   isSubmitting.value = true
 
   if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
-    status.value = 'error'
+    status.value = 'config-error'
     isSubmitting.value = false
     return
   }
@@ -84,22 +88,27 @@ const handleSubmit = async () => {
         template_id: EMAILJS_TEMPLATE_ID,
         user_id: EMAILJS_PUBLIC_KEY,
         template_params: {
-          to_email: 'fabienkiefer24@gmail.com',
+          to_email: EMAILJS_TO_EMAIL,
+          name: form.name,
+          email: form.email,
+          title: form.subject,
+          message: form.message,
           from_name: form.name,
           from_email: form.email,
           subject: form.subject,
-          message: form.message,
         },
       }),
     })
 
     if (!response.ok) {
-      throw new Error('EmailJS request failed')
+      const errorText = await response.text()
+      throw new Error(`EmailJS request failed (${response.status}): ${errorText}`)
     }
 
     resetForm()
     status.value = 'success'
-  } catch {
+  } catch (error) {
+    console.error(error)
     status.value = 'error'
   } finally {
     isSubmitting.value = false

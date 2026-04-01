@@ -32,7 +32,7 @@
   flex: 1;
   min-height: calc(100vh - 82px);
   width: 100%;
-  padding: 4rem;
+  padding: 4rem 8rem;
 }
 
 h1 {
@@ -99,5 +99,19 @@ textarea {
 
 .submit-btn:hover {
   background-color: #35a372;
+}
+
+@media (max-width: 900px) {
+  .contact {
+    padding: 2rem 1.25rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-form {
+    padding: 1.25rem;
+  }
 }
 </style>

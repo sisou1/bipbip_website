@@ -118,4 +118,37 @@ h1 {
   font-size: 1.1rem;
   line-height: 1.8;
 }
+
+@media (max-width: 900px) {
+  .products {
+    padding: 2rem 1.25rem;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .product-card {
+    min-height: unset;
+    flex-direction: column;
+  }
+
+  .product-image {
+    min-height: 200px;
+  }
+
+  .product-info {
+    padding: 1.25rem;
+  }
+
+  .product-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
 </style>

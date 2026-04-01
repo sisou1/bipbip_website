@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <header class="header">
     <div class="container">
       <RouterLink to="/" class="logo">
@@ -8,6 +8,7 @@
 
       <nav class="nav">
         <RouterLink to="/products" class="products-button">Produits</RouterLink>
+        <RouterLink to="/limites-legales" class="secondary-link">Limites légales</RouterLink>
         <RouterLink to="/about" class="secondary-link">À propos</RouterLink>
         <RouterLink to="/contact" class="secondary-link">Contact</RouterLink>
       </nav>

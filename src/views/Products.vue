@@ -1,10 +1,10 @@
-<template>
+﻿<template>
   <section class="products">
     <h1>Nos produits</h1>
     <div class="products-grid">
       <article class="product-card">
         <div class="product-image">
-          <div class="placeholder">IMAGE BRACELET</div>
+          <img :src="braceletImg" alt="Bracelet BipBip">
         </div>
         <div class="product-info">
           <h2>Bracelet BipBip</h2>
@@ -18,7 +18,7 @@
 
       <article class="product-card">
         <div class="product-image">
-          <div class="placeholder">IMAGE COLLIER</div>
+          <img :src="collierImg" alt="Collier BipBip">
         </div>
         <div class="product-info">
           <h2>Collier BipBip</h2>
@@ -32,20 +32,25 @@
 
       <article class="product-card">
         <div class="product-image">
-          <div class="placeholder">IMAGE MONTRE</div>
+          <div class="placeholder">IMAGE BIENTÔT DISPONIBLE</div>
         </div>
         <div class="product-info">
-          <h2>Montre BipBip</h2>
+          <h2>Porte-clés BipBip</h2>
           <p>
-            Une montre intelligente complète avec écran tactile qui affiche vos rappels
-            et suit votre observance. Synchronisation automatique avec votre smartphone
-            pour un suivi optimal.
+            Un porte-clés connecté compact et pratique pour recevoir vos rappels
+            de prise de médicaments partout avec vous. Le visuel sera ajouté dès
+            que l'image produit sera disponible.
           </p>
         </div>
       </article>
     </div>
   </section>
 </template>
+
+<script setup>
+import braceletImg from '../assets/images/Bracelet BipBip.png'
+import collierImg from '../assets/images/Collier Bipbip.png'
+</script>
 
 <style scoped>
 .products {
@@ -89,6 +94,12 @@ h1 {
   align-items: center;
   justify-content: center;
   background-color: #e0e0e0;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .placeholder {

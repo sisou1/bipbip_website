@@ -58,7 +58,6 @@ const status = ref('idle')
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-const EMAILJS_TO_EMAIL = import.meta.env.VITE_EMAILJS_TO_EMAIL || 'fabienkiefer24@gmail.com'
 
 const resetForm = () => {
   form.name = ''
@@ -88,7 +87,6 @@ const handleSubmit = async () => {
         template_id: EMAILJS_TEMPLATE_ID,
         user_id: EMAILJS_PUBLIC_KEY,
         template_params: {
-          to_email: EMAILJS_TO_EMAIL,
           name: form.name,
           email: form.email,
           title: form.subject,

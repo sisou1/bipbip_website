@@ -32,14 +32,13 @@
 
       <article class="product-card">
         <div class="product-image">
-          <div class="placeholder">IMAGE BIENTÔT DISPONIBLE</div>
+          <img :src="porteClesImg" alt="Porte-clés BipBip">
         </div>
         <div class="product-info">
           <h2>Porte-clés BipBip</h2>
           <p>
             Un porte-clés connecté compact et pratique pour recevoir vos rappels
-            de prise de médicaments partout avec vous. Le visuel sera ajouté dès
-            que l'image produit sera disponible.
+            de prise de médicaments partout avec vous.
           </p>
         </div>
       </article>
@@ -50,6 +49,7 @@
 <script setup>
 import braceletImg from '../assets/images/Bracelet BipBip.png'
 import collierImg from '../assets/images/Collier Bipbip.png'
+import porteClesImg from '../assets/images/Porte-clés BipBip.png'
 </script>
 
 <style scoped>
@@ -100,14 +100,6 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.placeholder {
-  padding: 2rem;
-  color: #999;
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
 }
 
 .product-info {
